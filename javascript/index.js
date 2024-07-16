@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const jobs = [
       "Malware Analyst",
-      "Unreal Engine Spc",
-      "C++ Developer",
-      "1 Thessalonians 5:11"
+      "C Developer",
+      "2 Corinthians 6:8"
     ];
   
     let i = 0;
