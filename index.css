@@ -594,7 +594,8 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-content: space-between;
+	align-content: center;
+	padding: 20px;
 }
 
 .f1 {
@@ -647,7 +648,9 @@
 
 .links {
 	display: flex;
-	gap: 10px;
+	justify-content: space-around; 
+    gap: 15px; 
+    margin-top: 10px; 
 }
 
 .links a img {
