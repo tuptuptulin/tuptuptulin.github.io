@@ -685,7 +685,7 @@
 /*css for centering child divs*/
 .slideblog, .footer, .nb {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;  
 }
 /*end*/
