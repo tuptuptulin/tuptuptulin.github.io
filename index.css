@@ -365,6 +365,13 @@
 	overflow: hidden;
 }
 
+.projectDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
 .projectDesc {
 	width: 93%;
 	overflow: hidden;
