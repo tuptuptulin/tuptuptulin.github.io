@@ -354,17 +354,20 @@
 .slideprojects {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
 	padding-top: 10px;
 }
 
 .slider-itemOne, .slider-itemTwo {
 	display: flex;
-    justify-content: center; 
+	justify-content: center;
+	align-items: center;
 	background-color: #222427;
-    height: 225px;
-    width: 49%;
-    border-radius: 8px;
+	height: 225px;
+	width: 49%;
+	border-radius: 8px;
 	overflow: hidden;
 }
 
