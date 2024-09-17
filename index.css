@@ -593,7 +593,7 @@
 	height: 78px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	align-content: center;
 	padding: 20px;
 	margin-left: 20px;
@@ -620,6 +620,7 @@
 	display: flex;
 	flex-direction: column;	
 	justify-content: center;
+	align-items: center;
 	gap: 8px;
 }
 
@@ -687,7 +688,7 @@
 /*css for centering child divs*/
 .slideblog, .footer, .nb {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;  
 }
 /*end*/
