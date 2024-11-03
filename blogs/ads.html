@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bloghub.css">
     <style>
         /* Body styling to set background and remove padding/margin */
+        /* Body styling to set background and remove padding/margin */
         body {
             background-color: #000;
             color: #fff;
@@ -16,15 +17,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             font-family: Arial, sans-serif;
         }
 
         /* Styles for the "BACK" button */
         .nav {
-            position: fixed;
-            top: 10px;
-            left: 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
             z-index: 1000;
         }
 
@@ -33,18 +34,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            height: 100vh;
         }
 
         /* Styling for the blog content area */
         .blogContent {
             max-width: 800px;
-            width: 100%;
+            width: 90%;
+            /* Reduce width to make centering more apparent */
             background-color: #222;
             color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            margin: auto;
+            /* Centers within flex container */
         }
 
         /* Centered heading */
