@@ -117,7 +117,9 @@
         <p>Now let's attach some alternate streams to it</p>
         <ul>
             <li>Set the Content to the Desired Stream<code>Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"</code></li>
-            <li>Display its Content: <code>Get-Content ".\demo.txt"</code> <--- not like that</li>
+            <li>Display its Content: <code>Get-Content ".\demo.txt"</code> 
+                <span style="font-weight: bold; color: red;">&lt;--- not like that</span>
+            </li>
             <li>But like this: <code>Get-Content ".\demo.txt" -Stream "Stream1"</code></li>
             <li>***the default stream is the $DATA, so <code>Get-Content ".\demo.txt"</code> is equivalent to <code>Get-Content ".\demo.txt" -Stream ":$DATA"</code></li>
         </ul>
