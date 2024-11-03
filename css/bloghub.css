@@ -157,20 +157,10 @@ body {
 }
 
 /* Center the entire container */
-.container {
+.blogContent {
     max-width: 800px;   /* Set a maximum width for readability */
     margin: 0 auto;     /* Center the container horizontally */
     padding: 20px;      /* Add padding around the content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
     background-color: #ffffff; /* Optional: Add a background color */
-}
-
-/* Adjust the body styling for centering the entire viewport content */
-body {
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    min-height: 100vh;  /* Make sure the content is centered on the full viewport height */
-    margin: 0;          /* Remove default margin */
-    background-color: #f0f0f0; /* Optional: Background color for the entire page */
 }
