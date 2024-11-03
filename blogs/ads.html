@@ -10,26 +10,30 @@
     <link rel="stylesheet" type="text/css" href="../css/bloghub.css">
     <style>
         /* Styling for the blog content area */
-        body {
+        /* Body styling to set background and remove padding/margin */
+body {
     background-color: #000;
     color: #fff;
-    margin: auto;
+    margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    justify-content: center; /* Centrare orizontală */
+    align-items: center;    /* Centrare verticală */
+    min-height: 100vh;      /* Înălțime minimă cât tot ecranul */
     font-family: Arial, sans-serif;
 }
-        .blogContent {
-            max-width: 1200px;
-            width: 100%;
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            margin: auto;
-            font-family: Arial, sans-serif;
-        }
+
+/* Styling for the blog content area */
+.blogContent {
+    max-width: 800px; /* Setați o lățime maximă rezonabilă */
+    width: 100%;      /* Lățime completă pentru ecrane mici */
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
 
         /* Centered heading */
         h1 {
