@@ -19,6 +19,8 @@ body {
     align-items: center;    /* Centrare verticală */
     min-height: 100vh;      /* Înălțime minimă cât tot ecranul */
     font-family: Arial, sans-serif;
+    background-image: url("/images/staticImages/xp.jpeg");
+    background-size: cover;
 }
 
 /* Styling for the blog content area */
@@ -60,12 +62,12 @@ body {
 <body>
     <div class="blogContent">
         <h1>Understanding Alternate Data Streams (ADS) in NTFS</h1>
-        <p>NTFS, the Windows file system, has a feature called Alternate Data Streams (ADS) that allows attaching
-            hidden data to files. This tutorial explores how to work with ADS using PowerShell.</p>
+        <p>The NTFS file system in Windows includes a feature called Alternate Data Streams (ADS), 
+            which allows you to attach additional data to an existing file without changing its visible size. In this article, we'll explore ADS using PowerShell with a few practical examples.</p>
 
         <h2>What are Alternate Data Streams?</h2>
-        <p>Alternate Data Streams (ADS) let you attach additional hidden data to a file without altering its visible
-            size, making it a powerful feature for storing metadata or securing information.</p>
+        <p>Alternate Data Streams are hidden data that can be attached to a file in NTFS, allowing for the storage of extra information without affecting the main file. 
+            These streams are commonly used for system information, but can also be used manually to store hidden data.</p>
 
         <h2>Practical Example of ADS</h2>
         <p>Let's go through a PowerShell example where we create a main file and attach different streams to it.</p>
