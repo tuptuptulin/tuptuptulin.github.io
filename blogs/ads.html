@@ -9,58 +9,66 @@
     <link rel="stylesheet" type="text/css" href="../css/bloghub.css">
     <style>
         /* Body styling to set background and remove padding/margin */
-body {
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-}
+        body {
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
 
-/* Styling for the blog content area */
-.blogContent {
-    max-width: 800px;
-    width: 90%;
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    text-align: center; /* Center text within the content */
-}
+        /* Centering container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-/* Centered heading */
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        /* Styling for the blog content area */
+        .blogContent {
+            max-width: 800px;
+            width: 90%;
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            margin: auto;
+        }
 
-/* Justified text for paragraphs and lists */
-p,
-ul {
-    text-align: justify;
-    line-height: 1.6;
-}
+        /* Centered heading */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-/* Optional styling for code blocks */
-code {
-    background-color: #444;
-    color: #00ff00;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-family: monospace;
-}
+        /* Justified text for paragraphs and lists */
+        p,
+        ul {
+            text-align: justify;
+            line-height: 1.6;
+        }
 
+        /* Optional styling for code blocks */
+        code {
+            background-color: #444;
+            color: #00ff00;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <!-- Blog Content -->
+        <div></div>
         <div class="blogContent">
             <h1>Understanding Alternate Data Streams (ADS) in NTFS</h1>
             <p>NTFS, the Windows file system, has a feature called Alternate Data Streams (ADS) that allows attaching
@@ -84,6 +92,7 @@ code {
             <p>ADS can be used to store additional data within files, providing security, metadata storage, and advanced
                 file management options for NTFS users.</p>
         </div>
+        <div></div>
     </div>
 </body>
 </html>
