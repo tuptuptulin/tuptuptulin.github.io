@@ -8,26 +8,25 @@
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/bloghub.css">
     <style>
-        /* Body styling to set background and remove padding/margin */
-        body {
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-        }
+        /* Set body to be a full viewport flex container */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
 
-        /* Centering container */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+/* Center and limit the width of the main container */
+.container {
+    max-width: 1200px;  /* You can adjust this based on desired width */
+    width: 100%;
+    padding: 20px;  /* Optional padding for inner spacing */
+    box-sizing: border-box;
+}
+
 
         /* Styling for the blog content area */
         .blogContent {
