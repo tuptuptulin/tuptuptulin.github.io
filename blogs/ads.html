@@ -7,60 +7,97 @@
     <title>Alternate Data Streams (ADS) - Blog</title>
     <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
     <style>
-        /* Styling for the blog content area */
-        /* Body styling to set background and remove padding/margin */
-body {
-    background-color: #000;
-    color: #fff;
-    margin: auto;
-    padding: 20;
-    display: flex;
-    justify-content: center; /* Centrare orizontală */
-    align-items: center;    /* Centrare verticală */
-    min-height: 100vh;      /* Înălțime minimă cât tot ecranul */
-    font-family: Arial, sans-serif;
-    background-image: url("/images/gifs/bacc.gif");
-    background-size: cover;
-}
+        body {
+            background-color: #000;
+            color: #fff;
+            margin: auto;
+            padding: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url("/images/gifs/bacc.gif");
+            background-size: cover;
+        }
 
-/* Styling for the blog content area */
-.blogContent {
-    max-width: 1200px; /* Setați o lățime maximă rezonabilă */
-    width: 100%;      /* Lățime completă pentru ecrane mici */
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
+        .blogContent {
+            max-width: 1200px;
+            width: 90%; /* Slightly reduced from 100% to prevent touching edges */
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            overflow: hidden; /* Prevents content from spilling out */
+        }
 
-
-        /* Centered heading */
         h1 {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        /* Justified text for paragraphs and lists */
-        p,
-        ul {
+        p, ul {
             text-align: justify;
             line-height: 1.6;
         }
 
-        /* Optional styling for code blocks */
         code {
             background-color: #444;
             color: #00ff00;
             padding: 2px 4px;
             border-radius: 4px;
             font-family: monospace;
+            word-wrap: break-word; /* Allows code to wrap */
+        }
+
+        /* New styles for images */
+        img {
+            max-width: 100%; /* Ensures image doesn't exceed container width */
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Removes default inline spacing */
+            margin: 20px auto; /* Centers image and adds vertical spacing */
+            border-radius: 4px; /* Optional: adds rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds subtle shadow */
+        }
+
+        /* Ensures code blocks don't overflow */
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+            background-color: #444;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        /* Makes lists more readable */
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .blogContent {
+                width: 95%;
+                padding: 15px;
+            }
+
+            code {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="blogContent">
+        <!-- Rest of your HTML content remains the same -->
         <h1>Understanding Alternate Data Streams (ADS) in NTFS</h1>
         <p>The NTFS file system in Windows includes a feature called Alternate Data Streams (ADS), 
             which allows you to attach additional data to an existing file without changing its visible size. In this article, we'll explore ADS using PowerShell with a few practical examples.</p>
