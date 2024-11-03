@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function loadAdsPreview() {
         var displayBlogs = document.querySelector('.displayBlogs');
         displayBlogs.innerHTML = `
-            <div class="blogPreview" onclick="window.location.href='ads.html'">
+            <div class="blogPreview" onclick="window.location.href='..\\blogs\\ads.html'">
                 <h2>Understanding Alternate Data Streams (ADS) in NTFS</h2>
                 <p>A look into how to use Alternate Data Streams in NTFS to store hidden data...</p>
                 <button>Read More</button>
