@@ -61,66 +61,27 @@ body {
 
 <body>
     <div class="blogContent">
-        <h1>Understanding Alternate Data Streams (ADS) in Windows - A Hidden Feature</h1>
-        
-        <h2>Introduction</h2>
-        <p>Alternate Data Streams (ADS) is a lesser-known feature of the NTFS file system that has been present since Windows NT 3.1. While it's a powerful functionality, many Windows users aren't aware of its existence. In this blog post, we'll explore what ADS is, how it works, and demonstrate its usage through practical examples.</p>
+        <h1>Understanding Alternate Data Streams (ADS) in NTFS</h1>
+        <p>The NTFS file system in Windows includes a feature called Alternate Data Streams (ADS), 
+            which allows you to attach additional data to an existing file without changing its visible size. In this article, we'll explore ADS using PowerShell with a few practical examples.</p>
 
-        <h2>What is Alternate Data Streams (ADS)?</h2>
-        <p>Alternate Data Streams allow files to contain more than one stream of data. While every file has a main stream where regular data is stored, NTFS permits the creation of additional streams that can store extra data. These additional streams are hidden from conventional file browsing methods and don't affect the main file's functionality.</p>
+        <h2>What are Alternate Data Streams?</h2>
+        <p>Alternate Data Streams are hidden data that can be attached to a file in NTFS, allowing for the storage of extra information without affecting the main file. 
+            These streams are commonly used for system information, but can also be used manually to store hidden data.</p>
 
-        <h2>Practical Demonstration</h2>
-        <p>Let's explore ADS using PowerShell commands. We'll create a file with multiple data streams and see how they work.</p>
-
-        <h3>1. Creating a Basic File with Content</h3>
-        <code>
-Set-Content -Value "demoTextForTexting" -Path "demo.txt"
-dir
-        </code>
-        <p>This creates our base file with some initial content. The 'dir' command shows us the file's basic properties.</p>
-
-        <h3>2. Adding Alternate Streams</h3>
-        <code>
-Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"
-Set-Content -Path ".\demo.txt" -Value "Stream2 text" -Stream "Stream2"
-Set-Content -Path ".\demo.txt" -Value "Stream3 text" -Stream "Stream3"
-        </code>
-        <p>We've now added three alternate streams to our file, each containing different content. Notice that the file size in Windows Explorer doesn't change!</p>
-
-        <h3>3. Reading Stream Content</h3>
-        <code>
-Get-Content .\demo.txt                    # Reads main stream
-Get-Content .\demo.txt -Stream 'Stream1'  # Reads first alternate stream
-Get-Content .\demo.txt -Stream 'Stream2'  # Reads second alternate stream
-Get-Content .\demo.txt -Stream 'Stream3'  # Reads third alternate stream
-        </code>
-
-        <h3>4. Viewing All Streams</h3>
-        <p>To see all streams associated with a file, use:</p>
-        <code>
-Get-Item .\demo.txt -Stream *
-        </code>
-
-        <h2>Important Security Considerations</h2>
+        <h2>Practical Example of ADS</h2>
+        <p>Let's go through a PowerShell example where we create a main file and attach different streams to it.</p>
         <ul>
-            <li>ADS can be used to hide data within files, making it a potential security concern</li>
-            <li>Malware authors have historically used ADS to hide malicious code</li>
-            <li>When files are copied to non-NTFS file systems, alternate streams are lost</li>
-            <li>Standard file copying operations might not preserve alternate streams</li>
+            <li>Create a file: <code>Set-Content -Value "demoText" -Path "demo.txt"</code></li>
+            <li>Add a stream: <code>Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"</code>
+            </li>
         </ul>
-
-        <h2>Practical Uses of ADS</h2>
-        <ul>
-            <li>Storing metadata about files</li>
-            <li>Maintaining compatibility information</li>
-            <li>Tracking file origin and security information</li>
-            <li>Developer annotations and debugging information</li>
-        </ul>
+        <p>Read the content of each stream with <code>Get-Content .\demo.txt -Stream 'Stream1'</code> to view the
+            hidden data.</p>
 
         <h2>Conclusion</h2>
-        <p>Alternate Data Streams is a powerful NTFS feature that, while potentially concerning from a security perspective, can be incredibly useful for legitimate purposes. Understanding how ADS works is crucial for system administrators, security professionals, and developers working in Windows environments.</p>
-
-        <p>Remember to use tools like Sysinternals Streams or PowerShell commands to detect and manage alternate data streams in your system, especially in security-sensitive environments.</p>
+        <p>ADS can be used to store additional data within files, providing security, metadata storage, and advanced
+            file management options for NTFS users.</p>
     </div>
 </body>
 
