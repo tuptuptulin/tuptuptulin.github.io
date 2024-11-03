@@ -1,4 +1,3 @@
-// Wait for the DOM content to be fully loaded before adding event listeners
 document.addEventListener("DOMContentLoaded", function() {
     // Function to show all blogs
     function showAllBlogs() {
@@ -6,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         blogs.forEach(function(blog) {
             blog.style.display = 'flex';
         });
+        loadAdsPreview(); // Load ADS preview in "ALL"
     }
 
     // Function to show blogs belonging to a specific category
@@ -19,6 +19,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 blog.style.display = 'none';
             }
         });
+        if (category === 'LOW LEVEL STUFF' || category === 'ALL') {
+            loadAdsPreview();
+        }
+    }
+
+    // Function to load a preview of the ADS article
+    function loadAdsPreview() {
+        var displayBlogs = document.querySelector('.displayBlogs');
+        displayBlogs.innerHTML = `
+            <div class="blogPreview" onclick="window.location.href='ads.html'">
+                <h2>Understanding Alternate Data Streams (ADS) in NTFS</h2>
+                <p>A look into how to use Alternate Data Streams in NTFS to store hidden data...</p>
+                <button>Read More</button>
+            </div>
+        `;
     }
 
     // Event listener for navigation items
@@ -29,4 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             showCategory(category);
         });
     });
+
+    // Initially show all blogs
+    showAllBlogs();
 });
