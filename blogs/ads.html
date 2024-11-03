@@ -25,7 +25,7 @@ body {
 
 /* Styling for the blog content area */
 .blogContent {
-    max-width: 800px; /* Setați o lățime maximă rezonabilă */
+    max-width: 1200px; /* Setați o lățime maximă rezonabilă */
     width: 100%;      /* Lățime completă pentru ecrane mici */
     background-color: #222;
     color: #fff;
@@ -75,6 +75,7 @@ body {
             <li>Creating a Basic File with Content: <code>Set-Content -Value "demoTextForTesting" -Path "demo.txt"</code></li>
             <li>Display its Content: <code>Get-Content ".\demo.txt"</code></li>
         </ul>
+        <img src="/images/staticImages/ads/creating1.png" alt="PowerShell Example for Creating a File and Displaying Content">
 
         <p>Now let's attach some alternate streams to it</p>
         <ul>
@@ -83,13 +84,16 @@ body {
             <li>But like this: <code>Get-Content ".\demo.txt" -Stream "Stream1"</code></li>
             <li>***the default stream is the $DATA, so <code>Get-Content ".\demo.txt"</code> is equivalent to <code>Get-Content ".\demo.txt" -Stream ":$DATA"</code></li>
         </ul>
+        <img src="/images/staticImages/ads/creating2.png" alt="PowerShell Example for Creating an Alternate Data Stream">
 
         <p>You can also create multiple streams to the same file</p>
+        <img src="/images/staticImages/ads/creating3.png" alt="PowerShell Example for Creating Multiple Alternate Data Streams">
 
         <p>Now let's see all the streams associated to a file, so we can detect anything hidden in it</p>
         <ul>
             <li>We'll use the Get-Item command: <code>Get-Item "demo.txt" -Stream *</code></li>
         </ul>
+        <img src="/images/staticImages/ads/finding1.png" alt="PowerShell Example for Listing All Streams in a File">
 
         <h2>Conclusion</h2>
         <p>ADS can be used to store additional data within files, providing security, metadata storage, and advanced
