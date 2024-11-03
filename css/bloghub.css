@@ -155,12 +155,3 @@ body {
 		margin-top: 6px;
 	}
 }
-
-/* Center the entire container */
-.blogContent {
-    max-width: 800px;   /* Set a maximum width for readability */
-    margin: 0 auto;     /* Center the container horizontally */
-    padding: 20px;      /* Add padding around the content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
-    background-color: #ffffff; /* Optional: Add a background color */
-}
