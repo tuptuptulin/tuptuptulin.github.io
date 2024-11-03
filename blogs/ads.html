@@ -19,7 +19,7 @@ body {
     align-items: center;    /* Centrare verticală */
     min-height: 100vh;      /* Înălțime minimă cât tot ecranul */
     font-family: Arial, sans-serif;
-    background-image: url("/images/staticImages/xp.jpeg");
+    background-image: url("/images/gifs/bacc.gif");
     background-size: cover;
 }
 
@@ -69,15 +69,27 @@ body {
         <p>Alternate Data Streams are hidden data that can be attached to a file in NTFS, allowing for the storage of extra information without affecting the main file. 
             These streams are commonly used for system information, but can also be used manually to store hidden data.</p>
 
-        <h2>Practical Example of ADS</h2>
-        <p>Let's go through a PowerShell example where we create a main file and attach different streams to it.</p>
+        <h2>Practical example of ADS</h2>
+        <p>Let's go through a PowerShell example where we create a main file and add some basic content to it</p>
         <ul>
-            <li>Create a file: <code>Set-Content -Value "demoText" -Path "demo.txt"</code></li>
-            <li>Add a stream: <code>Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"</code>
-            </li>
+            <li>Creating a Basic File with Content: <code>Set-Content -Value "demoTextForTesting" -Path "demo.txt"</code></li>
+            <li>Display its Content: <code>Get-Content ".\demo.txt"</code></li>
         </ul>
-        <p>Read the content of each stream with <code>Get-Content .\demo.txt -Stream 'Stream1'</code> to view the
-            hidden data.</p>
+
+        <p>Now let's attach some alternate streams to it</p>
+        <ul>
+            <li>Set the Content to the Desired Stream<code>Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"</code></li>
+            <li>Display its Content: <code>Get-Content ".\demo.txt"</code> <--- not like that</li>
+            <li>But like this: <code>Get-Content ".\demo.txt" -Stream "Stream1"</code></li>
+            <li>***the default stream is the $DATA, so <code>Get-Content ".\demo.txt"</code> is equivalent to <code>Get-Content ".\demo.txt" -Stream ":$DATA"</code></li>
+        </ul>
+
+        <p>You can also create multiple streams to the same file</p>
+
+        <p>Now let's see all the streams associated to a file, so we can detect anything hidden in it</p>
+        <ul>
+            <li>We'll use the Get-Item command: <code>Get-Item "demo.txt" -Stream *</code></li>
+        </ul>
 
         <h2>Conclusion</h2>
         <p>ADS can be used to store additional data within files, providing security, metadata storage, and advanced
