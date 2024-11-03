@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         blogs.forEach(function(blog) {
             blog.style.display = 'flex';
         });
-        loadAdsPreview(); // Load ADS preview in "ALL"
+        //loadAdsPreview(); // Load ADS preview in "ALL"
     }
 
     // Function to show blogs belonging to a specific category

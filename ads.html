@@ -28,7 +28,7 @@
                 <p>Alternate Data Streams (ADS) let you attach additional hidden data to a file without altering its visible size, making it a powerful feature for storing metadata or securing information.</p>
 
                 <h2>Practical Example of ADS</h2>
-                <p>Let’s go through a PowerShell example where we create a main file and attach different streams to it.</p>
+                <p>Let's go through a PowerShell example where we create a main file and attach different streams to it.</p>
                 <ul>
                     <li>Create a file: <code>Set-Content -Value "demoText" -Path "demo.txt"</code></li>
                     <li>Add a stream: <code>Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"</code></li>
@@ -42,3 +42,10 @@
     </div>
 </body>
 </html>
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
