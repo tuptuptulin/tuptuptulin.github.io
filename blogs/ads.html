@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Alternate Data Streams (ADS) - Blog</title>
     <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
@@ -33,11 +34,12 @@
             justify-content: center;
             align-items: center;
             width: 100%;
+            background-image: url("../images/staticImages/xp.jpeg");
         }
 
         /* Styling for the blog content area */
         .blogContent {
-            max-width: 800px;
+            max-width: 600px;
             width: 100%;
             background-color: #222;
             color: #fff;
@@ -53,7 +55,8 @@
         }
 
         /* Justified text for paragraphs and lists */
-        p, ul {
+        p,
+        ul {
             text-align: justify;
             line-height: 1.6;
         }
@@ -81,6 +84,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="items">
@@ -93,26 +97,32 @@
             </div>
         </div>
 
-            <!-- Blog Content -->
-            <div class="blogContent">
-                <h1>Understanding Alternate Data Streams (ADS) in NTFS</h1>
-                <p>NTFS, the Windows file system, has a feature called Alternate Data Streams (ADS) that allows attaching hidden data to files. This tutorial explores how to work with ADS using PowerShell.</p>
+        <!-- Blog Content -->
+        <div class="blogContent">
+            <h1>Understanding Alternate Data Streams (ADS) in NTFS</h1>
+            <p>NTFS, the Windows file system, has a feature called Alternate Data Streams (ADS) that allows attaching
+                hidden data to files. This tutorial explores how to work with ADS using PowerShell.</p>
 
-                <h2>What are Alternate Data Streams?</h2>
-                <p>Alternate Data Streams (ADS) let you attach additional hidden data to a file without altering its visible size, making it a powerful feature for storing metadata or securing information.</p>
+            <h2>What are Alternate Data Streams?</h2>
+            <p>Alternate Data Streams (ADS) let you attach additional hidden data to a file without altering its visible
+                size, making it a powerful feature for storing metadata or securing information.</p>
 
-                <h2>Practical Example of ADS</h2>
-                <p>Let's go through a PowerShell example where we create a main file and attach different streams to it.</p>
-                <ul>
-                    <li>Create a file: <code>Set-Content -Value "demoText" -Path "demo.txt"</code></li>
-                    <li>Add a stream: <code>Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"</code></li>
-                </ul>
-                <p>Read the content of each stream with <code>Get-Content .\demo.txt -Stream 'Stream1'</code> to view the hidden data.</p>
+            <h2>Practical Example of ADS</h2>
+            <p>Let's go through a PowerShell example where we create a main file and attach different streams to it.</p>
+            <ul>
+                <li>Create a file: <code>Set-Content -Value "demoText" -Path "demo.txt"</code></li>
+                <li>Add a stream: <code>Set-Content -Path ".\demo.txt" -Value "Stream1 text" -Stream "Stream1"</code>
+                </li>
+            </ul>
+            <p>Read the content of each stream with <code>Get-Content .\demo.txt -Stream 'Stream1'</code> to view the
+                hidden data.</p>
 
-                <h2>Conclusion</h2>
-                <p>ADS can be used to store additional data within files, providing security, metadata storage, and advanced file management options for NTFS users.</p>
-            </div>
-        
+            <h2>Conclusion</h2>
+            <p>ADS can be used to store additional data within files, providing security, metadata storage, and advanced
+                file management options for NTFS users.</p>
+        </div>
+
     </div>
 </body>
+
 </html>
