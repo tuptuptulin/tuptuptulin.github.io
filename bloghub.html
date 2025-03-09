@@ -7,21 +7,64 @@
         <link rel="stylesheet" type="text/css" href="css/global.css">
         <link rel="stylesheet" type="text/css" href="css/bloghub.css">
         <script src="javascript/bloghub.js"></script>
+        <style>
+            .blogNav {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .blogNav:hover {
+                background-color: #f0f0f0;
+            }
+            .blogNavIcon img {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+            }
+            .blogNavText {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            .blogPreview {
+                border: 1px solid #ddd;
+                padding: 15px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                transition: box-shadow 0.3s;
+            }
+            .blogPreview:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .blogPreview h2 {
+                margin-top: 0;
+            }
+            .blogPreview button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+            .blogPreview button:hover {
+                background-color: #0056b3;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
             <div class="items">
-
                 <div class="nav">
                     <a href="index.html">
                         <div class="back">
                             <img src="icons/back.png" /><p>BACK</p>
                         </div>
-                </a>
-                    <div class="utilities">
-                    </div>
+                    </a>
+                    <div class="utilities"></div>
                 </div>
-                
                 <div class="bloghub">
                     <div class="left">
                         <div class="blogAnime"><img src="images/gifs/blog.gif"></div>
